@@ -2,11 +2,16 @@
 pseries is a JavaScript micro-library for dealing with asynchronous flow control. You pass in an array of promise-returning functions and it executes those in series then returns a promise.
 
 ##Installation
-`npm install psync`
-`bower install psync`
+**Node:**
+
+`npm install pseries`
+
+**Browser:**
+
+`bower install pseries`
 
 ##Use Cases
-In both the browser and Node, you often have to call functions then wait for a response. Traditional callbacks work. Promises work better. But when you have a series of functions that are asynchronous, it can get very messy very fast. In Node, for example, if you do any asynchronous file operations, you often end up with a series of functions that need to happen one after the other. Nesting them in callbacks or promises is not the right answer. **pseries** allows you to execute a list functions in order, one after the other, with one final response oulet and one single outlet for handling errors.
+In both the browser and Node, you often have to call functions then wait for a response. Traditional callbacks work. Promises work better. But when you have a series of functions that are asynchronous, it gets very messy very fast. In Node, for example, if you do any asynchronous file operations, you end up with a series of functions that need to happen one after the other. Nesting them in callbacks or promises is not the right answer. **pseries** allows you to execute a list functions in order, one after the other, with one final response oulet and one single outlet for handling errors.
 
 ##Examples
 ```
