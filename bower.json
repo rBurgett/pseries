@@ -1,0 +1,29 @@
+{
+  "name": "pseries",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rBurgett/pseries",
+  "authors": [
+    "Ryan <ryan@burgettweb.net>"
+  ],
+  "description": "A micro-library for handling asynchronous flow control.",
+  "main": "pseries.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "promises",
+    "'flow",
+    "control'",
+    "series"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
