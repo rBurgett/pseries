@@ -14,16 +14,12 @@
   ],
   "keywords": [
     "promises",
-    "'flow",
-    "control'",
+    "flow control",
     "series"
   ],
   "license": "Apache-2.0",
   "ignore": [
-    "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ]
 }
