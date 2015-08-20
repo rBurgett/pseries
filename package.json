@@ -15,7 +15,7 @@
     "control flow",
     "series"
   ],
-  "author": "Ryan Burgett",
+  "author": "Ryan Burgett <ryan@burgettweb.net> (https://github.com/rBurgett)",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/rBurgett/pseries/issues"
