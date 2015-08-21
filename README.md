@@ -88,6 +88,35 @@ pseries([
   }
 );
 ```
+You can also nest pseries calls.
+```
+pseries([
+  firstFunction,
+  function() {
+    return new Promise(function(resolve, reject) {
+      pseries([
+        someFunction,
+        anotherFunction
+      ]).then(
+        function(res) {
+          resolve(res);
+        },
+        function(err) {
+          reject(err);
+        }
+      );
+    });
+  },
+  thirdFunction
+]).then(
+  function(res) {
+    // do something with the response
+  },
+  function(err) {
+    // handle any error
+  }
+);
+```
 **This is much cleaner than the following, traditional way of handling asynchronous functions.**
 ```
 
