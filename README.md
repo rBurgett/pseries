@@ -1,5 +1,5 @@
 #pseries
-pseries is a JavaScript micro-library for dealing with asynchronous flow control. You pass in an array of promise-returning functions and it executes those in series then returns a promise.
+pseries is a JavaScript micro-library for easily executing asynchronous functions in series. You pass in an array of promise-returning functions and it executes them in series then returns a promise.
 
 ##Installation
 **Node:**
@@ -12,7 +12,7 @@ pseries is a JavaScript micro-library for dealing with asynchronous flow control
 
 ##Benefits
 * Execute a list of functions in order
-* Execute one afte the other
+* Execute one after the other
 * One final response outlet (an array of responses)
 * **One single outlet for handling errors**
 * Completely asynchronous and non-blocking
@@ -31,7 +31,7 @@ var myFuncs = [   // an example array of promise-returning functions
       });
     });
   },
-  
+
   function() {    //then run this function...
     return new Promise(function(resolve, reject) {
       anotherAsyncFunc(function(err, res) {
@@ -42,7 +42,7 @@ var myFuncs = [   // an example array of promise-returning functions
       });
     });
   }
-  
+
 ];
 
 // pass that array into pseries and let it do the work
