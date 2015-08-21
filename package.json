@@ -2,7 +2,7 @@
   "name": "pseries",
   "version": "1.0.0",
   "description": "Execute promise-returning functions in series.",
-  "main": "pseries.js",
+  "main": "./lib/pseries.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony-generators test/tests.js"
   },
