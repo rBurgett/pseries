@@ -1,7 +1,7 @@
 {
   "name": "pseries",
   "version": "1.0.0",
-  "description": "A micro-library for handling asynchronous flow control.",
+  "description": "Execute promise-returning functions in series.",
   "main": "pseries.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony-generators test/tests.js"
@@ -13,14 +13,17 @@
   "keywords": [
     "promises",
     "control flow",
-    "series"
+    "series",
+    "sequence",
+    "asynchronous",
+    "functions"
   ],
   "author": "Ryan Burgett <ryan@burgettweb.net> (https://github.com/rBurgett)",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/rBurgett/pseries/issues"
   },
-  "homepage": "https://github.com/rBurgett/pseries#readme",
+  "homepage": "https://github.com/rBurgett/pseries",
   "devDependencies": {
     "mocha": "^2.2.5",
     "should": "^7.0.4"

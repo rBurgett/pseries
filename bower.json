@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "homepage": "https://github.com/rBurgett/pseries",
   "authors": [
-    "Ryan <ryan@burgettweb.net>"
+    "Ryan Burgett <ryan@burgettweb.net> (https://github.com/rBurgett)"
   ],
-  "description": "A micro-library for handling asynchronous flow control.",
+  "description": "Execute promise-returning functions in series.",
   "main": "pseries.js",
   "moduleType": [
     "amd",
@@ -13,9 +13,12 @@
     "node"
   ],
   "keywords": [
-    "promises",
-    "flow control",
-    "series"
+      "promises",
+      "control flow",
+      "series",
+      "sequence",
+      "asynchronous",
+      "functions"
   ],
   "license": "Apache-2.0",
   "ignore": [
