@@ -1,6 +1,6 @@
 {
   "name": "pseries",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Execute promise-returning functions in series.",
   "main": "./lib/pseries.js",
   "scripts": {
