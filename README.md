@@ -6,10 +6,6 @@ pseries is a JavaScript micro-library for easily executing asynchronous function
 
 `npm install pseries`
 
-**Browser:**
-
-`bower install pseries`
-
 ##Benefits
 * Execute a list of functions in order
 * Execute one after the other
