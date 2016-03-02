@@ -2,9 +2,10 @@
 pseries is a JavaScript micro-library for easily executing asynchronous functions in series. You pass in an array of promise-returning functions and it executes them in series then returns a promise.
 
 ##Installation
-**Node:** (requires `--harmony_generators` flag to be set)
-
-`npm install pseries`
+```
+npm install pseries
+```
+(if using version 1.x.x, requires `--harmony_generators` flag to be set)
 
 ##Benefits
 * Execute a list of functions in order
@@ -146,4 +147,4 @@ var myFunc = function() {
 ##License
 Apache License Version 2.0
 
-Copyright (c) 2015 by Ryan Burgett.
+Copyright (c) 2016 by Ryan Burgett.
