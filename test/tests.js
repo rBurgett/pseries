@@ -115,7 +115,7 @@ describe('pseries', function() {
 
             pseries(badArray).then(
                 function(res) {
-                    done();
+                    // done();
                 },
                 function(err) {
                     if(err) {
