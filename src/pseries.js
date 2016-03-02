@@ -32,14 +32,14 @@ const pseries = arr => {
                     }
                 },
                 err => reject(err)
-            )
+            );
 
-        }
+        };
 
         runFuncs(arr);
 
     });
-}
+};
 
 if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
