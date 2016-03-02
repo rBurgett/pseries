@@ -7,26 +7,21 @@
  * https://github.com/rBurgett/pseries/blob/master/LICENSE
  */
 
-var pseries = function(arr) {
-    return new Promise(function(resolve, reject) {
+const pseries = arr => {
+    return new Promise((resolve, reject) => {
 
-        var runFuncs = function(funcArr, i, resArray) {
-
-            i = i || 0;
-            resArray = resArray || [];
+        const runFuncs = (funcArr, i = 0, resArray = []) => {
 
             funcArr[i]().then(
-                function(res) {
-                    resArray.push(res);
+                res => {
+                    const newResArray = resArray.concat([res]);
                     if(i === funcArr.length - 1) {
-                        resolve(resArray);
+                        resolve(newResArray);
                     } else {
-                        runFuncs(funcArr, i + 1, resArray);
+                        runFuncs(funcArr, i + 1, newResArray);
                     }
                 },
-                function(err) {
-                    reject(err);
-                }
+                err => reject(err)
             )
         }
 
