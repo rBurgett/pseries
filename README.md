@@ -14,8 +14,48 @@ npm install pseries
 * **One single outlet for handling errors**
 * Completely asynchronous and non-blocking
 
-##Examples
+##Example using ES2015
+```javascript
+var myFuncs = [   // an example array of promise-returning functions
+
+  //run this function first
+  
+  () => new Promise((resolve, reject) => {
+  
+    someAsyncFunc((err, res) => {
+      if(err) reject(err);
+      else resolve(res);
+    });
+    
+  }),
+  
+  //then run this function...
+  
+  () => new Promise((resolve, reject) => {
+  
+    anotherAsyncFunc((err, res) => {
+      if(err) reject(err);
+      else resolve(res);
+    });
+    
+  }),
+
+];
+
+// pass that array into pseries and let it do the work
+
+pseries(myFuncs).then(
+  res => {
+    // do something with the response (an array of the responses from each of the functions)
+  },
+  err => {
+    // handle any error
+  }
+);
 ```
+
+##Examples
+```javascript
 var myFuncs = [   // an example array of promise-returning functions
 
   function() {    //run this function first
@@ -54,7 +94,7 @@ pseries(myFuncs).then(
 );
 ```
 or
-```
+```javascript
 pseries([
   function() {
     return new Promise(function(resolve, reject) {
@@ -86,7 +126,7 @@ pseries([
 );
 ```
 You can also nest pseries calls.
-```
+```javascript
 pseries([
   firstFunction,
   function() {
@@ -115,7 +155,7 @@ pseries([
 );
 ```
 **This is much cleaner than the following, traditional way of handling asynchronous functions.**
-```
+```javascript
 
 // Don't do this!!!
 
